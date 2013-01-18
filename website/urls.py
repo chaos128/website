@@ -6,13 +6,13 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'website.views.home', name='home'),
+    url(r'^$', 'website.narrowcast.views.index', name='home'),
     # url(r'^website/', include('website.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^/', include('narrowcast.urls')),
+    #url(r'^narrowcast/', include('narrowcast.urls')),
     #url(r'^admin/', include(admin.site.urls)),
 )
