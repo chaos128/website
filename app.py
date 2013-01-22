@@ -1,11 +1,17 @@
+from __future__ import with_statement
 import os
-from flask import Flask
+from contextlib import closing
+from flask import Flask, request, session, g, redirect, url_for, \
+     abort, render_template, flash
+
+DEBUG = True
+SECRET_KEY = 'development key'
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return 'Hello World!'
+def home():
+   return render_template('base.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
