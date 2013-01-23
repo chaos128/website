@@ -1,9 +1,2 @@
 @import 'compass';
 
-$twohun: 200px;
-
-a { 
-  font-size: $twohun;
-  background: red;
-  @include border-radius(25px);
-}
