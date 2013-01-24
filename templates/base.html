@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <title>{% block title %}Narrowcast{% endblock %}</title>
-    <meta name="description" content="Narrowcast.">
+    <meta name="description" content="Company website for Narrowcast, Inc.">
     <meta name="author" content="Narrowcast, Inc.">
     <meta name="viewport" content="width=1024">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/application.css') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
-    <link href="{{ url_for('static', filename='stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="{{ url_for('static', filename='stylesheets/print.css') }}" media="print" rel="stylesheet" type="text/css" />
-    <!--[if IE]>
-    <link href="{{ url_for('static', filename='stylesheets/ie.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
     <link href="{{ url_for('static', filename='stylesheets/application.css') }}" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <div class="container">
-    {% block container %}
-    {% endblock %}
-  </div>
-
-
-</body>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="{{ url_for('static', filename='js/html5shiv.js') }}"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="navbar" class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">
+            <!--<img id="logo" src="" alt="Narrowcast logo" />-->
+          </a>
+          <ul class="nav">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('team') }}">Team</a></li>
+            <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+            <li><a href="{{ url_for('press') }}">Press</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      {% block container %}
+      {% endblock %}
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p id="copyright">© 2013 Narrowcast, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
