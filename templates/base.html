@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Narrowcast{% endblock %}</title>
+    <meta name="description" content="Narrowcast.">
+    <meta name="author" content="Narrowcast, Inc.">
+    <meta name="viewport" content="width=1024">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/application.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link href="{{ url_for('static', filename='stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='stylesheets/print.css') }}" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="{{ url_for('static', filename='stylesheets/ie.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="{{ url_for('static', filename='stylesheets/application.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    {% block container %}
+    {% endblock %}
+  </div>
+
+
+</body>
+</html>
