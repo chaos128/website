@@ -1,2 +1,17 @@
 @import 'compass';
 
+.container-responsive {
+  width: 80%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+#back {
+  max-width: 100%;
+  height: 370px;
+  z-index: -1;
+  background: url( "../img/ironmonger.jpg") no-repeat center bottom;
+  @include background-size(cover);
+}

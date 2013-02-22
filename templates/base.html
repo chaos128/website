@@ -19,7 +19,7 @@
   <body>
     <div id="navbar" class="navbar navbar-inverse navbar-static-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container-fluid container-responsive">
           <a class="brand" href="#">
             <!--<img id="logo" src="" alt="Narrowcast logo" />-->
           </a>
@@ -32,12 +32,14 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid container-responsive">
+       
       {% block container %}
       {% endblock %}
+        
     </div>
     <footer class="footer">
-      <div class="container">
+      <div class="container-fluid container-responsive">
         <p id="copyright">© 2013 Narrowcast, Inc. All rights reserved.</p>
       </div>
     </footer>
